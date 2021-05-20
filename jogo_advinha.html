@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+
+var pulalinha = function(){
+	document.write("<br>");
+};
+
+var mostra = function(frase){
+	document.write(frase);
+	pulalinha();
+	pulalinha();
+}
+
+var numeroPensado = Math.round(Math.random() * 100);
+var numeroDaTentativa = 1;
+
+while(numeroDaTentativa <=3){
+	var chute = prompt("J� pensei. Qual voc� acha que �?");
+
+	if(chute == numeroPensado){
+		mostra("UAU! Voc� acertou, pois eu pensei no " + numeroPensado);
+		break;
+	} else {
+		mostra("Voc� errou! Ser� que ainda tenho mais tentativa?");
+	}
+	
+	numeroDaTentativa++;
+
+}
+
+</script>
